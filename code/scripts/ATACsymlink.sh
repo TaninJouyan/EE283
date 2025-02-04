@@ -19,9 +19,10 @@ do
 
    ff1=$(basename $READ1)
    ff2=$(basename $READ2)
-
-   ln -s $READ1 $DestDir/$ff1 # now make the symlink
-   ln -s $READ2 $DestDir/$ff2 
+   newname1=$barcode"_R1.fq.gz"
+   newname2=$barcode"_R2.fq.gz"
+   ln -s $READ1 $DestDir/$newname1 # now make the symlink
+   ln -s $READ2 $DestDir/$newname2
 
 done < $File
 
