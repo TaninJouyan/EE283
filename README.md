@@ -1,5 +1,7 @@
 # EE283
 
-[Week 1](homework1.md) homework markdown is added to the main branch.
-[Week 2](homework2.md) homework markdown is added to the main branch.
-[Week 3](week3.md) markdown is added to main branch.
+[Week 1](homework1.md) assignment is added to the main branch.
+[Week 2](homework2.md) assignment is added to the main branch.
+[Week 3](week3.md) assignment is added to the main branch.
+[week 4](week4.md) assignment is added to the main branch.
+[week 5](week5.md) assignment is added to the main branch.

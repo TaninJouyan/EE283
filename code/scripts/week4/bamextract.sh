@@ -7,13 +7,14 @@
 #SBATCH --mem-per-cpu=3G
 #SBATCH --time=1-00:00:00
 
+input='data/processed/DNAseq/bams'
 
 module load samtools/1.15.1
 
 
-samtools view -b ADL06_1.sort.bam -q 30 X:1880000-2000000 > A4.bam
-samtools sort A4.bam -o A4.sort.bam
-samtools index A4.sort.bam
-samtools view -b ADL09_1.sort.bam -q 30 X:1880000-2000000 > A5.bam
-samtools sort A5.bam -o A5.sort.bam
-samtools index A5.sort.bam
+samtools view -b $input/ADL06_1.sort.bam -q 30 X:1880000-2000000 -o $input/A4.bam
+samtools sort $input/A4.bam -o $input/A4.sort.bam
+samtools index $input/A4.sort.bam
+samtools view -b $input/ADL09_1.sort.bam -q 30 X:1880000-2000000 -o $input/A5.bam
+samtools sort $input/A5.bam -o $input/A5.sort.bam
+samtools index $input/A5.sort.bam
