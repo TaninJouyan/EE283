@@ -11,7 +11,7 @@ The vcf files has gone through series of filtering to retain the most meaningful
 These steps have significantly decreased the number of SNPs called in the beginning and its shown in the following plot. Getting rid of artifacts has the most significant decease in number of SNPs.
 <figure>
     <img src="data/processed/DNAseq/figures/snp-filtering-plot.png" alt="Loss of SNPs is shown after each filtering step." style="width:500px; height:auto;">
-    <figcaption style="text-align: center;">Figure 3. Sequence GC%  for sequences ≤ 100kb.</figcaption>
+    <figcaption style="text-align: center;">Figure 1. Loss of SNPs is shown after each filtering step..</figcaption>
 </figure>
 
 **Visualizing SNPs using a heatmap**
@@ -19,7 +19,7 @@ The SNPs left aftering filtering has been index and visualized using Seasborn py
 
 <figure>
     <img src="data/processed/DNAseq/figures/snp-visualization.png" alt="SNP genotypes are characterized using a heatmap. " style="width:500px; height:auto;">
-    <figcaption style="text-align: center;">Figure 3. Sequence GC%  for sequences ≤ 100kb.</figcaption>
+    <figcaption style="text-align: center;">Figure 2. SNP genotypes are characterized using a heatmap.</figcaption>
 </figure>
 
 **Visualizing isogenic SNPs at the frequency of 50%**
@@ -27,7 +27,7 @@ In this step, the SNPs where two of the strains are 0/0 and the other two 1/1 we
 
 <figure>
     <img src="data/processed/DNAseq/figures/snp-isogenic.png" alt="SNP isogenic genotypes are characterized using a heatmap. " style="width:500px; height:auto;">
-    <figcaption style="text-align: center;">Figure 3. Sequence GC%  for sequences ≤ 100kb.</figcaption>
+    <figcaption style="text-align: center;">Figure 3. SNP of isogenic genotypes are characterized using a heatmap.</figcaption>
 </figure>
 
 The scripts and python notebook for this assignment can be found in [Scripts](code/scripts/week5) and [Python notebook](code/pynb).
