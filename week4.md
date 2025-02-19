@@ -10,5 +10,5 @@ The nucleotide coverage of chromosome X from 1880000 to 2000000 nucleotides was 
 
 <figure>
     <img src="data/processed/DNAseq/figures/coverageplot.png" alt="Line plot showing coverage of chromosome X in _D.melanogaster_ " style="width:500px; height:auto;">
-    <figcaption style="text-align: center;">Figure 3. Sequence GC%  for sequences ≤ 100kb.</figcaption>
+    <figcaption style="text-align: center;">Line plot showing coverage of chromosome X in _D.melanogaster_ .</figcaption>
 </figure>
