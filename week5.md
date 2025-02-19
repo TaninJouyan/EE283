@@ -14,6 +14,9 @@ These steps have significantly decreased the number of SNPs called in the beginn
     <figcaption style="text-align: center;">Figure 1. Loss of SNPs is shown after each filtering step..</figcaption>
 </figure>
 
+
+
+
 **Visualizing SNPs using a heatmap**
 The SNPs left aftering filtering has been index and visualized using Seasborn python package. Genotypes are represented as 0, 1 and 2, where the number represent that number of non-reference alleles. Missing genotypes are represented by -1.
 
@@ -21,6 +24,9 @@ The SNPs left aftering filtering has been index and visualized using Seasborn py
     <img src="data/processed/DNAseq/figures/snp-visualization.png" alt="SNP genotypes are characterized using a heatmap. " style="width:500px; height:auto;">
     <figcaption style="text-align: center;">Figure 2. SNP genotypes are characterized using a heatmap.</figcaption>
 </figure>
+
+
+
 
 **Visualizing isogenic SNPs at the frequency of 50%**
 In this step, the SNPs where two of the strains are 0/0 and the other two 1/1 were considered and visualized using Seaborn python packages to plot a heatmap.
