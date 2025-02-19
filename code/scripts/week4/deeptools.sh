@@ -9,18 +9,13 @@
 #SBATCH --time=1-00:00:00   
 
 # Deeptools environment should be activated 
-#the script is ran in fle directory
+#The script should be run in file directory
 
-bamCoverage -b A5.sort.bam -o A5.bw --normalizeUsing RPKM
-bamCoverage -b A4.sort.bam -o A4.bw --normalizeUsing RPKM
+bamCoverage -b A4.sort.bam -o A4.bg --normalizeUsing RPKM -r X:1880000:2000000 -of bedgraph
+bamCoverage -b A5.sort.bam -o A5.bg --normalizeUsing RPKM -r X:1880000:2000000 -of bedgraph
 
-bamCoverage -b A5.sort.bam -o A5.bg --normalizeUsing RPKM -of bedgraph
-bamCoverage -b A4.sort.bam -o A4.bg --normalizeUsing RPKM -of bedgraph
-#bamCoverage -b A5.sort.bam -o A5.e.bg --normalizeUsing RPKM -e
-#bamCoverage -b A4.sort.bam -o A4.e.bg --normalizeUsing RPKM -e
+bamCoverage -b A4.sort.bam -o A4-e.bg --normalizeUsing RPKM -r X:1880000:2000000 -of bedgraph -e
+bamCoverage -b A5.sort.bam -o A5-e.bg --normalizeUsing RPKM -r X:1880000:2000000 -of bedgraph -e
 
-bamCoverage -b A5.sort.bam -o A5.bg --normalizeUsing RPKM -of bedgraph -e
-bamCoverage -b A4.sort.bam -o A4.bg --normalizeUsing RPKM -of bedgraph -e
 
-#plotCoverage -b A4.sort.bam A5.sort.bam -o A4_A5.cov.png 
-#plotCoverage -b A4.sort.bam A5.sort.bam -o A4_A5.e.cov.png -e
+
