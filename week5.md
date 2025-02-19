@@ -21,7 +21,7 @@ These steps have significantly decreased the number of SNPs called in the beginn
 The SNPs left aftering filtering has been index and visualized using Seasborn python package. Genotypes are represented as 0, 1 and 2, where the number represent that number of non-reference alleles. Missing genotypes are represented by -1.
 
 <figure>
-    <img src="data/processed/DNAseq/figures/snp_visualization.png" alt="SNP genotypes are characterized using a heatmap. " style="width:500px; height:auto;">
+    <img src="data/processed/DNAseq/figures/snp_visualization.png" alt="SNP genotypes are characterized using a heatmap. " style="width:700px; height:auto;">
     <figcaption style="text-align: center;">Figure 2. SNP genotypes are characterized using a heatmap.</figcaption>
 </figure>
 
