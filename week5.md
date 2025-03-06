@@ -10,7 +10,7 @@ The vcf files has gone through series of filtering to retain the most meaningful
 
 These steps have significantly decreased the number of SNPs called in the beginning and its shown in the following plot. Getting rid of artifacts has the most significant decease in number of SNPs.
 <figure>
-    <img src="data/processed/DNAseq/figures/snp-filtering-plot.png" alt="Loss of SNPs is shown after each filtering step." style="width:500px; height:auto;">
+    <img src="data/processed/figures/snp-filtering-plot.png" alt="Loss of SNPs is shown after each filtering step." style="width:500px; height:auto;">
     <figcaption style="text-align: center;">Figure 1. Loss of SNPs is shown after each filtering step..</figcaption>
 </figure>
 
@@ -21,7 +21,7 @@ These steps have significantly decreased the number of SNPs called in the beginn
 The SNPs left aftering filtering has been index and visualized using Seasborn python package. Genotypes are represented as 0, 1 and 2, where the number represent that number of non-reference alleles. Missing genotypes are represented by -1.
 
 <figure>
-    <img src="data/processed/DNAseq/figures/snp_visualization.png" alt="SNP genotypes are characterized using a heatmap. " style="width:700px; height:auto;">
+    <img src="data/processed/figures/snp_visualization.png" alt="SNP genotypes are characterized using a heatmap. " style="width:800px; height:auto;">
     <figcaption style="text-align: center;">Figure 2. SNP genotypes are characterized using a heatmap.</figcaption>
 </figure>
 
@@ -32,7 +32,7 @@ The SNPs left aftering filtering has been index and visualized using Seasborn py
 In this step, the SNPs where two of the strains are 0/0 and the other two 1/1 were considered and visualized using Seaborn python packages to plot a heatmap.
 
 <figure>
-    <img src="data/processed/DNAseq/figures/snp_isogenic.png" alt="SNP isogenic genotypes are characterized using a heatmap. " style="width:500px; height:auto;">
+    <img src="data/processed/figures/snp_isogenic.png" alt="SNP isogenic genotypes are characterized using a heatmap. " style="width:500px; height:auto;">
     <figcaption style="text-align: center;">Figure 3. SNP of isogenic genotypes are characterized using a heatmap.</figcaption>
 </figure>
 
