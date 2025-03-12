@@ -34,8 +34,6 @@ png('processed/figures/both_models.png', width = 7, height = 6, units = 'in', re
 print(combined_plot)
 dev.off()
 
-test<-png('processed/figures/both_models', width=7, height=6, units='in',res=600)
-(manhattan_plot_1)/(manhattan_plot_2)
 
 source("/dfs6/pub/tjouyan/ee283/myManhattan/myManhattanFunction.R")
 
@@ -50,8 +48,9 @@ result_2<- result_2 %>%
 model1<-myManhattan(result, graph.title = "Manhattan Plot ANOVA model 1", font.size = 10,
             suggestiveline = 2e-4, suggestivecolor = "pink")
            
+
 print(model1)
-model2<-myManhattan(result_2, graph.title = "Manhattan Plot ANOVA model 2", font.size = 10, 
+model2<-myManhattan(result_2, graph.title = "Manhattan Plot ANOVA model 2", font.size = 10,
             suggestiveline = 2e-4, suggestivecolor = "orange")
 print(model2) 
 ggsave("processed/figures/myManhattan_model1.png", model1, width = 12, height = 6)
@@ -70,35 +69,34 @@ scatter_plot
 
 #Adjust the plots to grid in one figure
 
+library(ggplot2)
+library(patchwork)
+
+# Adjusting the theme for better readability
 model1 <- model1 + theme(
-  text = element_text(size = 10),  # Adjust overall font size
-  axis.title = element_text(size = 9),  # Axis titles font size
-  axis.text = element_text(size = 10),   # Axis text font size
-  plot.title = element_text(size = 14)   # Title font size
+  text = element_text(size = 14),
+  axis.title = element_text(size = 12),
+  axis.text = element_text(size = 10),
+  plot.title = element_text(size = 16)
 )
 
 model2 <- model2 + theme(
-  text = element_text(size = 10),
-  axis.title = element_text(size = 9),
+  text = element_text(size = 14),
+  axis.title = element_text(size = 12),
   axis.text = element_text(size = 10),
-  plot.title = element_text(size = 14)
+  plot.title = element_text(size = 16)
 )
 
 scatter_plot <- scatter_plot + theme(
   text = element_text(size = 14),
-  axis.title = element_text(size = 9),
+  axis.title = element_text(size = 12),
   axis.text = element_text(size = 10),
-  plot.title = element_text(size = 14)
+  plot.title = element_text(size = 16)
 )
 
-
-
-# Combine the plots using patchwork
+# Improve layout by adding spacing between plots
 combined_plot2 <- (model1 / model2) | scatter_plot
-combined_plot2 <- combined_plot2 + plot_layout(
-  widths = c(2, 1),  # Adjust relative width of columns (model1/model2 vs scatter_plot)
-  heights = c(1, 1)  # Adjust relative height of rows (model1 vs model2)
-)
-
-png('processed/figures/combined_plots.png', width = 1200, height = 550, units = 'in', res = 600)
 print(combined_plot2)
+# Save plot with wider dimensions
+ggsave("processed/figures/combined_plots.png", plot = combined_plot2, 
+       width = 20, height = 10, units = 'in', dpi = 300)

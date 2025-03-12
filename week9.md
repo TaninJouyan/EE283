@@ -25,3 +25,5 @@ model2 <- anova(lm(asin(sqrt(freq)) ~ founder + treat %in% founder, data=mal2))
     <figcaption style="text-align: center;">Figure 2. Manhattan plot for SNPs called using two different ANOVA models.Scatter plot showing differently called SNPs using two dofferent ANOVA models.</figcaption>
 </figure>
  
+ 
+ R script for this assignment can be found [here](code/scripts/week9/week9.R).

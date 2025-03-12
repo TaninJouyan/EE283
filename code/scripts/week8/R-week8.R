@@ -60,6 +60,7 @@ result_2 <- mal2 %>%
   mutate(logp = map_dbl(data, mylog10pmodel_2)) %>%
   select(-data)
 
+
 print(result_2)
 write_tsv(result_2,'anova_model2_result')
 ________________________________________

@@ -17,3 +17,5 @@ The reuslt of both models is shown in the following table. The R script related 
 | 10    | chrX      | 496075   | 0.14175556 | 0.14447017 |
 
 logp.x corresponds to the ANOVA model whre the net effect of the treament equals to zero. And logp.y is calculated with the ANOVA model where there is a two-way interaction between treat and founder. 
+
+R script used to generate the data shown can be found [here](code/scripts/week8/R-week8.R).
