@@ -20,27 +20,18 @@ mal2 <- mal %>% mutate(treat = str_sub(pool, 2, 2))
 print(mal2)
 library(dplyr)
 
-# Remove groups where treat or founder has only 1 unique value
-filtered_mal2<- mal2 %>%
-  group_by(chr, pos) %>%
-  filter(n_distinct(treat) > 1 & n_distinct(founder) > 1) %>%
-  ungroup()
-
-# Check if filtering worked
-print(dim(filtered_mal2))  # Should be smaller than original df
-
 # ANOVA model
-out <- anova(lm(asin(sqrt(freq)) ~ treat + founder + treat:founder, data = mal2))
-print(out)
+#out <- anova(lm(asin(sqrt(freq)) ~ treat + founder + treat:founder, data = mal2))
+#print(out)
 
 # Calculate F distribution
-myF <- -pf(out[1, 4], out[1, 1], out[4, 1], lower.tail = FALSE, log.p = TRUE) / log(10)
-print(paste("myF:", myF))
+#myF <- -pf(out[1, 4], out[1, 1], out[4, 1], lower.tail = FALSE, log.p = TRUE) / log(10)
+#print(paste("myF:", myF))
 
 # Define mylog10pmodel function
 mylog10pmodel <- function(df) {
   if (any(is.na(df$freq))) {
-    return(-0.5)
+    return(0)
   }
   out <- anova(lm(asin(sqrt(freq)) ~ treat + founder + treat:founder, data = df))
   -pf(out[1, 4], out[1, 1], out[4, 1], lower.tail = FALSE, log.p = TRUE) / log(10)
@@ -49,10 +40,10 @@ mylog10pmodel <- function(df) {
 #Define mylog10model_2 (ANOVA model absed on net effect of treatment ==0)
 mylog10pmodel_2 <- function(df) {
     if (any(is.na(df$freq))) {
-      return(-0.5)
+      return(0)
     }
-    out2 <- anova(lm(asin(sqrt(freq)) ~ treat + founder + treat %in% founder, data = df))
-  -pf(out2[1, 4], out2[1, 1], out2[4, 1], lower.tail = FALSE, log.p = TRUE) / log(10)
+    out2 <- anova(lm(asin(sqrt(freq)) ~ founder + treat %in% founder, data = df))
+  -pf(out2[1, 3], out2[1, 1], out2[3, 1], lower.tail = FALSE, log.p = TRUE) / log(10)
   }
 
 # Group and nest data for both models
@@ -74,5 +65,5 @@ write_tsv(result_2,'anova_model2_result')
 ________________________________________
 
 #Merge result dataframes
-join= full_join(result, result_2, by=c('chr','pos'))
+merged_result= merge(result, result_2, suffix=c('chr','pos'))
 join
