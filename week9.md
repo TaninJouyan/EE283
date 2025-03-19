@@ -1,7 +1,18 @@
 #### Week 9 
 
-In this weeks assignment, material was focused on creating plots annd plot grids.
+In this weeks assignment, material was focused on creating plots and plot grids.
 
+**Fixing and 'flights' grid plot**
+
+The following plot is the result of fixing and twiking the assigned plot to make it publishable. 
+
+<figure>
+    <img src="data/Q1.png" alt="Flights " style="width:800px; height:auto;">
+    <figcaption style="text-align: center;">Figure 1. Analyzing Delays by Distance, Carrier, and Distribution.
+.</figcaption>
+</figure>
+
+**Creating grid plot from RNA analysis plots**
 **Manhattan Plot**
 The data retrieved from week 8 was used to plot manhattan plots shown below. 
 
