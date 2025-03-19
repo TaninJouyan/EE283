@@ -8,11 +8,19 @@ The following plot is the result of fixing and twiking the assigned plot to make
 
 <figure>
     <img src="data/Q1.png" alt="Flights " style="width:800px; height:auto;">
-    <figcaption style="text-align: center;">Figure 1. Analyzing Delays by Distance, Carrier, and Distribution.
-.</figcaption>
+    <figcaption style="text-align: center;">Figure 1. Analyzing Delays by Distance, Carrier, and Distribution.</figcaption>
 </figure>
 
 **Creating grid plot from RNA analysis plots**
+
+In this Question, a four grid plot was generated to show RNAseq analyzed data. The plots were converted into ggplots explaining differences noticed from [RNAseq](week7.md) assignment.
+
+<figure>
+    <img src="data/Q2.png" alt="RNAseq " style="width:800px; height:auto;">
+    <figcaption style="text-align: center;">Figure 2. RNAseq data analysis.</figcaption>
+</figure>
+
+
 **Manhattan Plot**
 The data retrieved from week 8 was used to plot manhattan plots shown below. 
 
@@ -25,7 +33,7 @@ model2 <- anova(lm(asin(sqrt(freq)) ~ founder + treat %in% founder, data=mal2))
 
 <figure>
     <img src="data/processed/figures/both_models.png" alt="Mahattan plot for two ANOVA models " style="width:800px; height:auto;">
-    <figcaption style="text-align: center;">Figure 1. Manhattan plot for SNPs called using two different ANOVA models.</figcaption>
+    <figcaption style="text-align: center;">Figure 3. Manhattan plot for SNPs called using two different ANOVA models.</figcaption>
 </figure>
 
 2) The 'myManhattan.R' script has been used to generate the following plots
@@ -33,7 +41,7 @@ model2 <- anova(lm(asin(sqrt(freq)) ~ founder + treat %in% founder, data=mal2))
  
 <figure>
     <img src="data/processed/figures/combined_plots.png" alt="Mahattan plot for two ANOVA models " style="width:800px; height:auto;">
-    <figcaption style="text-align: center;">Figure 2. Manhattan plot for SNPs called using two different ANOVA models.Scatter plot showing differently called SNPs using two dofferent ANOVA models.</figcaption>
+    <figcaption style="text-align: center;">Figure 4. Manhattan plot for SNPs called using two different ANOVA models.Scatter plot showing differently called SNPs using two dofferent ANOVA models.</figcaption>
 </figure>
  
  
