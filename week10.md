@@ -1,6 +1,6 @@
 #### Week 10 (Independent Project)
 
-##### Epitranscriptomic analysis of direct RNA sequecing
+### Epitranscriptomic analysis of direct RNA sequecing
 
    In this assignment, raw data produced by sequencing mice brain coreteces were processed to calculate number of RNA modifications (especifically m6A and m5C modifications) present in the epitranscriptome of this tissue. 
 
@@ -30,6 +30,7 @@
     <img src="data/processed/figures/m5c-modification.png" alt="m5C mice modification scatter plot" style="width:500px; height:auto;">
     <figcaption style="text-align: Left; color: gray;">Figure 2. m5C modification comparison between castaneus and black 6 cortices. </figcaption>
 </figure>
+
 
 
 This [R script](code/scripts/week10/plot-r.R) has been used ot generate the plots shown.
