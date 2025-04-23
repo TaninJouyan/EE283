@@ -1,5 +1,7 @@
 # EE283: Advanced Bioinformatics
 
+In this class a combinaiton of bash (HPC), python adn R programming has been used. 
+
 [Week 1](homework1.md): **Basic Linux Commands** 
 
 [Week 2](homework2.md): **Creating Symlinks to RNAseq, DNAseq and ATACseq data**
