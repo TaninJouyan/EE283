@@ -1,4 +1,4 @@
-# EE283
+# EE283: Advanced Bioinformatics
 
 [Week 1](homework1.md): **Basic Linux Commands** 
 
