@@ -17,7 +17,7 @@
 
  GATK software was used to call SNPs and heatmaps (made with python seaborn package) were generated to visualize the data.
 
-[Week 7](week7.md): **Differntian Gene Expression Analysis of RNAseq data**
+[Week 7](week7.md): **Differential Gene Expression Analysis of RNAseq data**
 
  Programs/Packages used:
    - FeatureCount on HPC.
