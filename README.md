@@ -1,6 +1,6 @@
 # EE283: Advanced Bioinformatics
 
-In this class a combinaiton of bash (HPC), python and R programming has been used. 
+In this class a combinaiton of command line (HPC), python and R programming has been used. 
 
 [Week 1](homework1.md): **Basic Bash Commands** 
 
